@@ -1,0 +1,372 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Poppins:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+
+
+  --primdark:#00004f;
+  --primlight:#524aac;
+  ---primary:#19227c;
+
+  --secondary:#ffc400;
+  --seclight:#fff64f;
+  --secdark:#c79400;
+  
+  --taustadark: #e1e2d1;
+  --taustalight: #f5f5f6;
+}
+
+
+.App {
+  text-align: center;
+}
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*custom css*/
+
+/*Navbar*/
+.navbar{
+  display: flex;
+  background-color: var(---primary);
+  height: 85px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px  0px 4px 1px var(--primdark) inset;
+
+
+}
+
+.navbar:last-child{
+  margin-left: auto;
+}
+.navbar a{
+ text-decoration: none;
+
+ font-weight: bolder;
+ font-size: 12px;
+}
+.links{
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  align-items: center;
+
+
+
+}
+.links a, .login a{
+  margin-right: 30px;
+  color:#fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+.links:first-child{
+  margin-left: 10px;
+
+}
+.links a:hover, .login a:hover, .btn_logout:hover{
+  color:var(--secondary);
+}
+
+.login{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.login a{
+  font-size: 14px;
+
+}
+
+
+.emailNav{
+  color:#fff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  margin:  0 20px;
+}
+.btn_logout{
+  background-color: transparent;
+  color: var(--secondary);
+  border:none;
+  padding: 4px 8px;
+  font-weight: bolder;
+  font-size: 12px;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin-right: 15px;
+}
+.logoContainer{
+  margin-right:20px;
+}
+
+/*main page*/
+
+.kuvaContainer{
+  width: 100vw;
+  height: 500px;
+  background-color: var(--primlight);
+  background-image: url('../public/images/coverimg2.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  box-shadow: 0 1px 4px 0 var(--primdark);
+
+}
+.kuvaContainer div{
+  margin:20px 40px;
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 3px black;
+
+}
+.kuvaContainerlast-child{
+  align-self: auto;
+;
+}
+.imgButton{
+
+  align-self:flex-end;
+}
+.btn_img{
+  background-color:var(--secondary);
+
+  color: #000;
+  border:none;
+  padding: 9px 13px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 1px 1px 1px 0 var(--secdark);
+  font-weight: bolder;
+}
+.btn_img:hover{
+  background-color: var(--secdark);
+}
+.box{
+  max-width: 440px;
+  height: 130px;
+  background-color: var(---primary);
+  margin:100px auto;
+  padding: 30px 40px;
+  border-radius: 5px;
+  color: #fff;
+  
+}
+.box a{
+  text-decoration: none;
+  color: var(--seclight);
+
+}
+.box a:hover{
+  text-decoration: none;
+  color: var(--secondary);
+
+}
+.box span{
+   font-size: 1.3em;
+}
+
+/*Register page*/
+
+.regFormDiv, .loginContainer{
+  background-image: url("../public/images/heinikko.jpg");
+  background-size: cover;
+  height: 80vh;
+  padding: 100px;
+}
+.btnRegLog{
+
+}
+
+
+/*RACES */
+.otsikko{
+  font-size: 2.2em;
+  font-weight: bolder;
+  margin:40px;
+}
+.racesContainer{
+
+  width: 70%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 50px;
+  row-gap: 50px;
+  justify-content: space-around;
+  margin: 50px auto;
+  padding: 20px 20px;
+}
+
+.kisaDiv{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  height: 490px;
+  width: 300px;
+  border: 2px solid var(--taustadark);
+  background-color: var(--taustalight);
+  box-shadow: 0px 2px 4px 0 var(--primary);
+  border-radius: 4px;
+  padding: 25px 15px;
+  font-size: 1.2em;
+}
+.imgRace{
+  width: 200px;
+  height:200px;
+
+  margin: 0px auto
+}
+.imgRace img {
+  width: 200px;
+  height: 200px;
+  object-fit:cover;
+  border-radius: 4px;
+
+
+}
+.kisaInfo{
+  margin: 5px;
+}
+
+.cancelled{
+
+  opacity: 0.6;
+ 
+
+
+}
+/*Omat tiedot*/
+.meContainer{
+ 
+  min-height: 80vh;
+  padding-top: 50px;
+}
+
+.meInfoDiv{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 600px;
+  height: 300px;
+  background-color: var(--taustalight);
+  margin: 50px auto;
+  color:var(--tumma);
+  font-size: 1.5em;
+  font-weight: bolder;
+  padding: 35px 45px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+
+}
+
+.cancel_btn{
+  padding: 4px 5px;
+  color:#000;
+  font-weight: bolder;
+  background-color: var(--seclight);
+  border: 1px solid var(--secdark) ;
+  border-radius: 3px;
+
+}
+
+/*Omat ilmot*/
+
+.omatIlmotKisa{
+
+  width: 800px;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--secondary);
+  background-color: var(--taustalight);
+  box-shadow: 1px 1px 1px 0 var(--secdark);
+  border-radius: 4px;
+  padding: 15px 20px;
+
+  margin: 50px auto;
+}
+.omatIlmotKisa img{
+  width: 130px;
+  max-height: 120px;
+  object-fit: cover;
+}
+.omatIlmotKisa p{
+  margin-left: 30px;
+  word-spacing: 3px;
+  font-weight: bolder;
+  text-shadow: 0.5px 0.5px black;
+  font-size: 2em;
+}
+@media only screen and (max-width: 1200px){
+  
+  /*Races*/
+  .racesContainer{
+   width: 70%;
+  display: grid;
+  grid-template-columns: auto auto ;
+
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .omatIlmotKisa{
+
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--secondary);
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 1em;
+  }
+  .omatIlmotKisa img{
+    max-width: 150px;
+    object-fit: cover;
+ 
+  }
+  .omatIlmotKisa p{
+    margin-left: 0;
+    word-spacing: 2px;
+  }
+  
+
+  /**omat tiedot*/
+  .meInfoDiv{
+    width: 370px;
+  }
+
+
+  /*Races*/
+  .racesContainer{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+  }
+}
